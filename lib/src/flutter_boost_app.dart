@@ -102,7 +102,7 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
         return true;
       }());
 
-      refreshOnPush(initialContainer);
+      // refreshOnPush(initialContainer);
       _boostFlutterRouterApi.isEnvReady = true;
       _addAppLifecycleStateEventListener();
       BoostOperationQueue.instance.runPendingOperations();
