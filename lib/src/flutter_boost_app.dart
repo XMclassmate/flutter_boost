@@ -93,7 +93,7 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
     _containers.add(initialContainer);
     super.initState();
 
-    print(overlayKey.toString());
+    Logger.log(overlayKey.toString());
     // Make sure that the widget in the tree that matches [overlayKey]
     // is already mounted, or [refreshOnPush] will fail.
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -103,7 +103,7 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
         return true;
       }());
 
-      print("post:"+overlayKey.toString());
+      Logger.log("post:"+overlayKey.toString());
       refreshOnPush(initialContainer);
       _boostFlutterRouterApi.isEnvReady = true;
       _addAppLifecycleStateEventListener();
